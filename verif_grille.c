@@ -108,15 +108,18 @@ int     verif_bloc(char **grille)
 
     k = 0;
     p = 0;
-    i = p / 9;
-    j = p % 9;
     while (p < 81)
     {
-        k = grille[i][j] - 48;
-        grille[i][j] = '.';
-        if (check_value_bloc(k, i, j, grille) == 0)
-            return (0);
-        grille[i][j] = k + 48;
+        i = p / 9;
+        j = p % 9;
+        if (grille[i][j] != '.')
+        {
+            k = grille[i][j] - 48;
+            grille[i][j] = '.';
+            if (check_value_bloc(k, i, j, grille) == 0)
+                return (0);
+            grille[i][j] = k + 48;
+        }
         p ++;
     }
     return (1);

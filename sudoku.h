@@ -9,6 +9,7 @@ int     check_value_bloc(int k, int i, int j, char **grille);
 int     ft_strlen(char *str);
 void    ft_putnbr(int nb);
 void    ft_putchar(char c);
+void    ft_putstr(char *str);
 int     verif_grille(int argc, char **argv);
 int     check_value_columns(int k, int j, char **grille);
 int     check_value_lines(int k, int i, char **grille);
